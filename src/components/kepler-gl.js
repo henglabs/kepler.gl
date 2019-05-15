@@ -31,7 +31,10 @@ import * as MapStyleActions from 'actions/map-style-actions';
 import * as UIStateActions from 'actions/ui-state-actions';
 
 import {EXPORT_IMAGE_ID, DIMENSIONS,
-  KEPLER_GL_NAME, KEPLER_GL_VERSION, THEME} from 'constants/default-settings';
+  KEPLER_GL_NAME, KEPLER_GL_VERSION,
+  THEME} from 'constants/default-settings';
+
+import {MISSING_MAPBOX_TOKEN} from 'constants/user-feedbacks';
 
 import SidePanelFactory from './side-panel';
 import MapContainerFactory from './map-container';
@@ -41,6 +44,7 @@ import PlotContainerFactory from './plot-container';
 import NotificationPanelFactory from './notification-panel';
 
 import {generateHashId} from 'utils/utils';
+import {errorNotification} from 'utils/notifications-utils';
 
 import {theme as basicTheme, themeLT} from 'styles/base';
 
@@ -106,6 +110,14 @@ function KeplerGlFactory(
     componentWillMount() {
       this._loadMapStyle(this.props.mapStyles);
       this._handleResize(this.props);
+    }
+
+    componentDidMount() {
+      if ((this.props.mapboxApiAccessToken || '') === '') {
+        this.props.uiStateActions.addNotification(errorNotification({
+          message: MISSING_MAPBOX_TOKEN
+        }));
+      }
     }
 
     componentWillReceiveProps(nextProps) {

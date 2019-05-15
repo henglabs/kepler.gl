@@ -37,8 +37,10 @@ import {
   PlotContainerFactory
 } from 'components';
 import NotificationPanelFactory from 'components/notification-panel';
+
 import {ActionTypes} from 'actions';
 import {DEFAULT_MAP_STYLES, EXPORT_IMAGE_ID} from 'constants';
+import {MISSING_MAPBOX_TOKEN} from 'constants/user-feedbacks';
 
 const KeplerGl = appInjector.get(KeplerGlFactory);
 const SidePanel = appInjector.get(SidePanelFactory);
@@ -420,7 +422,6 @@ test('Components -> KeplerGl -> Mount -> Load custom map style task', t => {
     'Should load map style into reducer and create layer groups'
   );
 
-  const resultState2 = coreReducer(resultState1, actions[1]);
   const [task1, ...rest] = drainTasksForTesting();
   t.equal(rest.length, 0, 'should dispatch 1 tasks');
 
@@ -458,6 +459,52 @@ test('Components -> KeplerGl -> Mount -> Load custom map style task', t => {
     task1.payload,
     expectedTask.payload,
     'should create task to load map styles'
+  );
+
+  t.end();
+});
+
+test.only('Components -> KeplerGl -> Mount -> No Mapbox token', t => {
+
+  // mount with readOnly true
+  const initialStateReadonly = {
+    keplerGl: {
+      map: {
+        ...initialCoreState,
+        uiState: {
+          ...initialCoreState.uiState,
+          readOnly: true
+        }
+      }
+    }
+  };
+
+  const store = mockStore(initialStateReadonly);
+  let wrapper;
+
+  t.doesNotThrow(() => {
+    wrapper = mount(
+      <Provider store={store}>
+        <KeplerGl
+          id="map"
+          mapboxApiAccessToken=""
+          selector={state => state.keplerGl.map}
+          dispatch={store.dispatch}
+        />
+      </Provider>
+    );
+  }, 'Should not throw error when mount KeplerGl');
+
+  t.equal(wrapper.find(NotificationPanel).length, 1, 'should render NotificationPanel');
+
+  const actions = store.getActions();
+
+  const expectedAddNotificationAction = actions.find(action => action.type === '@@kepler.gl/ADD_NOTIFICATION');
+
+  t.equal(
+    expectedAddNotificationAction.payload.message,
+    MISSING_MAPBOX_TOKEN,
+    'Should have triggered an add notification action to display missing token'
   );
 
   t.end();
