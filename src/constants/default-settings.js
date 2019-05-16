@@ -75,12 +75,12 @@ export const ADD_MAP_STYLE_ID = 'addMapStyle';
  */
 export const EXPORT_MAP_ID = 'exportMap';
 
-import {
-  Layers,
-  FilterFunnel,
-  Settings,
-  CursorClick
-} from 'components/common/icons';
+// import {
+//   Layers,
+//   FilterFunnel,
+//   Settings,
+//   CursorClick
+// } from 'components/common/icons';
 
 export const KEPLER_GL_NAME = 'kepler.gl';
 
@@ -119,28 +119,28 @@ export const THEME = keyMirror({
   dark: null
 });
 
-export const PANELS = [
-  {
-    id: 'layer',
-    label: 'Layers',
-    iconComponent: Layers
-  },
-  {
-    id: 'filter',
-    label: 'Filters',
-    iconComponent: FilterFunnel
-  },
-  {
-    id: 'interaction',
-    label: 'Interactions',
-    iconComponent: CursorClick
-  },
-  {
-    id: 'map',
-    label: 'Base map',
-    iconComponent: Settings
-  }
-];
+// export const PANELS = [
+//   {
+//     id: 'layer',
+//     label: 'Layers',
+//     iconComponent: Layers
+//   },
+//   {
+//     id: 'filter',
+//     label: 'Filters',
+//     iconComponent: FilterFunnel
+//   },
+//   {
+//     id: 'interaction',
+//     label: 'Interactions',
+//     iconComponent: CursorClick
+//   },
+//   {
+//     id: 'map',
+//     label: 'Base map',
+//     iconComponent: Settings
+//   }
+// ];
 
 // MAP STYLES
 
