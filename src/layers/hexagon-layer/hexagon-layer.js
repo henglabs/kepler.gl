@@ -22,7 +22,6 @@ import {GeoJsonLayer} from 'deck.gl';
 import AggregationLayer from '../aggregation-layer';
 import EnhancedHexagonLayer from 'deckgl-layers/hexagon-layer/enhanced-hexagon-layer';
 import {hexagonToPolygonGeo} from './hexagon-utils';
-import HexagonLayerIcon from './hexagon-layer-icon';
 import {clamp} from 'utils/data-utils';
 import {HIGHLIGH_COLOR_3D} from 'constants/default-settings';
 
@@ -58,7 +57,7 @@ export default class HexagonLayer extends AggregationLayer {
   }
 
   get layerIcon() {
-    return HexagonLayerIcon;
+    return null;
   }
 
   renderLayer({
