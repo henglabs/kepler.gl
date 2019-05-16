@@ -21,7 +21,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {createSelector} from 'reselect';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import PanelHeaderAction from 'components/side-panel/panel-header-action';
 import FieldSelector from 'components/common/field-selector';
 import {Trash, Clock} from 'components/common/icons';

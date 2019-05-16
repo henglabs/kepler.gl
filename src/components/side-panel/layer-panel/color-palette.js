@@ -20,7 +20,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 
 const propTypes = {
   colors: PropTypes.arrayOf(PropTypes.string).isRequired,

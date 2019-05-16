@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 import React from 'react';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import {format} from 'd3-format';
 
 import {SidePanelSection, Tooltip, DatasetSquare, CenterFlexbox} from 'components/common/styled-components';

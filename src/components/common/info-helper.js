@@ -22,7 +22,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Tooltip} from './styled-components';
 import {Docs} from 'components/common/icons';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 
 const StyledInfoHelper = styled.div`
   align-items: center;

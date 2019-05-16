@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 import React from 'react';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import PanelHeaderAction from 'components/side-panel/panel-header-action';
 import {EyeSeen, EyeUnseen, Upload} from 'components/common/icons';
 

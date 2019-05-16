@@ -18,43 +18,43 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import {default as PointLayer} from './point-layer/point-layer';
-import {default as ArcLayer} from './arc-layer/arc-layer';
-import {default as LineLayer} from './line-layer/line-layer';
-import {default as GridLayer} from './grid-layer/grid-layer';
-import {default as HexagonLayer} from './hexagon-layer/hexagon-layer';
-import {default as GeojsonLayer} from './geojson-layer/geojson-layer';
-import {default as ClusterLayer} from './cluster-layer/cluster-layer';
-import {default as IconLayer} from './icon-layer/icon-layer';
-import {default as HeatmapLayer} from './heatmap-layer/heatmap-layer';
-import {default as H3Layer} from './h3-hexagon-layer/h3-hexagon-layer';
+export {default as PointLayer} from './point-layer/point-layer';
+export {default as ArcLayer} from './arc-layer/arc-layer';
+export {default as LineLayer} from './line-layer/line-layer';
+export {default as GridLayer} from './grid-layer/grid-layer';
+export {default as HexagonLayer} from './hexagon-layer/hexagon-layer';
+export {default as GeojsonLayer} from './geojson-layer/geojson-layer';
+export {default as ClusterLayer} from './cluster-layer/cluster-layer';
+export {default as IconLayer} from './icon-layer/icon-layer';
+export {default as HeatmapLayer} from './heatmap-layer/heatmap-layer';
+export {default as H3Layer} from './h3-hexagon-layer/h3-hexagon-layer';
 
 // base layer
 export {default as Layer} from './base-layer';
 
 // individual layers
-export const KeplerGlLayers = {
-  PointLayer,
-  ArcLayer,
-  LineLayer,
-  GridLayer,
-  HexagonLayer,
-  GeojsonLayer,
-  ClusterLayer,
-  IconLayer,
-  HeatmapLayer,
-  H3Layer
-};
+// export const KeplerGlLayers = {
+//   PointLayer,
+//   ArcLayer,
+//   LineLayer,
+//   GridLayer,
+//   HexagonLayer,
+//   GeojsonLayer,
+//   ClusterLayer,
+//   IconLayer,
+//   HeatmapLayer,
+//   H3Layer
+// };
 
-export const LayerClasses = {
-  point: PointLayer,
-  arc: ArcLayer,
-  line: LineLayer,
-  grid: GridLayer,
-  hexagon: HexagonLayer,
-  geojson: GeojsonLayer,
-  cluster: ClusterLayer,
-  icon: IconLayer,
-  heatmap: HeatmapLayer,
-  hexagonId: H3Layer
-};
+// export const LayerClasses = {
+//   point: PointLayer,
+//   arc: ArcLayer,
+//   line: LineLayer,
+//   grid: GridLayer,
+//   hexagon: HexagonLayer,
+//   geojson: GeojsonLayer,
+//   cluster: ClusterLayer,
+//   icon: IconLayer,
+//   heatmap: HeatmapLayer,
+//   hexagonId: H3Layer
+// };

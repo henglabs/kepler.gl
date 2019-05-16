@@ -21,7 +21,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {range} from 'd3-array';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import {hexToRgb} from 'utils/color-utils';
 
 import {ColorsByTheme, Themes} from 'constants/color-palette';

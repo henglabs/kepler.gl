@@ -20,7 +20,7 @@
 
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 
 import SidebarFactory from './side-panel/side-bar';
 import PanelHeaderFactory from './side-panel/panel-header';

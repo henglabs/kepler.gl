@@ -20,7 +20,7 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import {event, select} from 'd3-selection';
 import {brushX} from 'd3-brush';
 

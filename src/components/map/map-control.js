@@ -21,7 +21,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {createSelector} from 'reselect';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 
 import {Tooltip, IconRoundSmall} from 'components/common/styled-components';
 import MapLayerSelector from 'components/common/map-layer-selector';

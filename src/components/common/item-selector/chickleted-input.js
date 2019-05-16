@@ -21,7 +21,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import Delete from '../icons/delete';
 
 const propTypes = {

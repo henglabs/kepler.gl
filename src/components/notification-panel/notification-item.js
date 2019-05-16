@@ -20,7 +20,7 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import {Delete, Info, Warning, Checkmark} from 'components/common/icons';
 import ReactMarkdown from 'react-markdown';
 
@@ -30,8 +30,8 @@ const NotificationItemContent = styled.div`
   display: flex;
   flex-direction: row;
   width: ${props => props.theme.notificationPanelItemWidth * (1 + Number(props.isExpanded))}px;
-  height: ${props => 
-    props.theme.notificationPanelItemHeight * (1 + Number(props.isExpanded)) 
+  height: ${props =>
+    props.theme.notificationPanelItemHeight * (1 + Number(props.isExpanded))
   }px;
   font-size: 10px;
   margin-bottom: 1rem;

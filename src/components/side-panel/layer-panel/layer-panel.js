@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 import React, {Component} from 'react';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import LayerConfigurator from './layer-configurator';

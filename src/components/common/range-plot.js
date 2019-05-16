@@ -25,7 +25,7 @@ import moment from 'moment';
 import {max} from 'd3-array';
 import {createSelector} from 'reselect';
 import {LineSeries, XYPlot, CustomSVGSeries, Hint, MarkSeries} from 'react-vis';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import RangeBrush from './range-brush';
 import {getTimeWidgetHintFormatter} from 'utils/filter-utils';
 import {theme} from 'styles/base';

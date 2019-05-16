@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 import React, {Component} from 'react';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import window from 'global/window';
 
 import {ALL_FIELD_TYPES} from 'constants/default-settings';

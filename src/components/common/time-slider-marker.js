@@ -24,7 +24,7 @@ import {scaleUtc} from 'd3-scale';
 import {select} from 'd3-selection';
 import {axisBottom} from 'd3-axis';
 import {createSelector} from 'reselect';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 
 const TimeSliderContainer = styled.svg`
   pointer-events: none;

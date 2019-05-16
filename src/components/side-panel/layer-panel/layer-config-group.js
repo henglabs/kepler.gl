@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 import React, {Component} from 'react';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import classnames from 'classnames';
 import Switch from 'components/common/switch';
 import {VertThreeDots} from 'components/common/icons';

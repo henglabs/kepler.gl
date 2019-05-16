@@ -21,7 +21,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import uniq from 'lodash.uniq';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import ItemSelector from 'components/common/item-selector/item-selector';
 import {PanelLabel} from 'components/common/styled-components';
 import RangeSlider from 'components/common/range-slider';

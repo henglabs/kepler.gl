@@ -24,7 +24,7 @@ import moment from 'moment';
 import {requestAnimationFrame, cancelAnimationFrame} from 'global/window';
 import classnames from 'classnames';
 import throttle from 'lodash.throttle';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import {createSelector} from 'reselect';
 import {Play, Reset, Pause, Minus} from 'components/common/icons';
 import {SelectTextBold, SelectText, Button, ButtonGroup} from 'components/common/styled-components';

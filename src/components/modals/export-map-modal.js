@@ -20,7 +20,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import JSONPretty from 'react-json-pretty';
 import {GITHUB_EXPORT_HTML_MAP, GITHUB_ADD_DATA_TO_MAP} from 'constants/user-guides';
 import {FileType} from 'components/common/icons';
@@ -44,7 +44,7 @@ const StyledInput = styled.input`
   height: ${props => props.theme.inputBoxHeight};
   outline: 0;
   font-size: ${props => props.theme.inputFontSize};
-  
+
   :active,
   :focus,
   &.focus,
@@ -130,7 +130,7 @@ const StyledJsonExportSection = styled(ExportMapStyledExportSection)`
     color: ${props => props.theme.errorColor};
     font-size: 11px;
   }
-  
+
   .viewer {
     border: 1px solid ${props => props.theme.selectBorderColorLT};
     background-color: white;

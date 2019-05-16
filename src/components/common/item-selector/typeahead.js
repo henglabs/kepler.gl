@@ -22,7 +22,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import fuzzy from 'fuzzy';
 import classNames from 'classnames';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import {console as Console} from 'global/window';
 
 import Accessor from './accessor';

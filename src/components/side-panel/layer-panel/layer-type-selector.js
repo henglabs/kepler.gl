@@ -21,7 +21,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 
 import {classList} from 'components/common/item-selector/dropdown-list';
 import ItemSelector from 'components/common/item-selector/item-selector';

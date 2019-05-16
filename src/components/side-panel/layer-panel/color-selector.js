@@ -20,7 +20,7 @@
 
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import {rgbToHex} from 'utils/color-utils';
 import SingleColorPalette from 'components/side-panel/layer-panel/single-color-palette';
 import ColorRangeSelector from 'components/side-panel/layer-panel/color-range-selector';

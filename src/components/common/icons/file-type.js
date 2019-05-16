@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 import React from 'react';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 
 import {File} from 'components/common/icons';
 

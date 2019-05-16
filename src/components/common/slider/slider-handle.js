@@ -21,7 +21,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import styled from 'styled-components';
+import * as styled from 'styled-components';
 import MouseEventHandler from './mouse-event';
 
 const StyledSliderHandle = styled.span`

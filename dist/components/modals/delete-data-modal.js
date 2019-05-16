@@ -1,0 +1,58 @@
+"use strict";
+
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = exports.DeleteDatasetModal = void 0;
+
+var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var styled = _interopRequireWildcard(require("styled-components"));
+
+var _datasetLabel = _interopRequireDefault(require("../common/dataset-label"));
+
+function _templateObject() {
+  var data = (0, _taggedTemplateLiteral2["default"])(["\n  margin-top: 24px;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+var StyledMsg = styled.div(_templateObject());
+
+var DeleteDatasetModal = function DeleteDatasetModal(_ref) {
+  var _ref$dataset = _ref.dataset,
+      dataset = _ref$dataset === void 0 ? {} : _ref$dataset,
+      _ref$layers = _ref.layers,
+      layers = _ref$layers === void 0 ? [] : _ref$layers;
+  // retrieve only layers related to the current dataset
+  var currDatasetLayers = layers.filter(function (layer) {
+    return layer.config.dataId === dataset.id;
+  });
+  return _react["default"].createElement("div", {
+    className: "delete-dataset-modal"
+  }, _react["default"].createElement(_datasetLabel["default"], {
+    dataset: dataset
+  }), _react["default"].createElement(StyledMsg, {
+    className: "delete-dataset-msg"
+  }, "you are going to delete this dataset. It will affect ".concat(currDatasetLayers.length, " layers")));
+};
+
+exports.DeleteDatasetModal = DeleteDatasetModal;
+
+var DeleteDatasetModalFactory = function DeleteDatasetModalFactory() {
+  return DeleteDatasetModal;
+};
+
+var _default = DeleteDatasetModalFactory;
+exports["default"] = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9jb21wb25lbnRzL21vZGFscy9kZWxldGUtZGF0YS1tb2RhbC5qcyJdLCJuYW1lcyI6WyJTdHlsZWRNc2ciLCJzdHlsZWQiLCJkaXYiLCJEZWxldGVEYXRhc2V0TW9kYWwiLCJkYXRhc2V0IiwibGF5ZXJzIiwiY3VyckRhdGFzZXRMYXllcnMiLCJmaWx0ZXIiLCJsYXllciIsImNvbmZpZyIsImRhdGFJZCIsImlkIiwibGVuZ3RoIiwiRGVsZXRlRGF0YXNldE1vZGFsRmFjdG9yeSJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7OztBQW9CQTs7QUFDQTs7QUFDQTs7Ozs7Ozs7Ozs7O0FBRUEsSUFBTUEsU0FBUyxHQUFHQyxNQUFNLENBQUNDLEdBQVYsbUJBQWY7O0FBSU8sSUFBTUMsa0JBQWtCLEdBQUcsU0FBckJBLGtCQUFxQixPQUFpQztBQUFBLDBCQUEvQkMsT0FBK0I7QUFBQSxNQUEvQkEsT0FBK0IsNkJBQXJCLEVBQXFCO0FBQUEseUJBQWpCQyxNQUFpQjtBQUFBLE1BQWpCQSxNQUFpQiw0QkFBUixFQUFRO0FBQ2pFO0FBQ0EsTUFBTUMsaUJBQWlCLEdBQUdELE1BQU0sQ0FBQ0UsTUFBUCxDQUN4QixVQUFBQyxLQUFLO0FBQUEsV0FBSUEsS0FBSyxDQUFDQyxNQUFOLENBQWFDLE1BQWIsS0FBd0JOLE9BQU8sQ0FBQ08sRUFBcEM7QUFBQSxHQURtQixDQUExQjtBQUlBLFNBQ0U7QUFBSyxJQUFBLFNBQVMsRUFBQztBQUFmLEtBQ0UsZ0NBQUMsd0JBQUQ7QUFBYyxJQUFBLE9BQU8sRUFBRVA7QUFBdkIsSUFERixFQUVFLGdDQUFDLFNBQUQ7QUFBVyxJQUFBLFNBQVMsRUFBQztBQUFyQixvRUFDRUUsaUJBQWlCLENBQUNNLE1BRHBCLGFBRkYsQ0FERjtBQVFELENBZE07Ozs7QUFnQlAsSUFBTUMseUJBQXlCLEdBQUcsU0FBNUJBLHlCQUE0QjtBQUFBLFNBQU1WLGtCQUFOO0FBQUEsQ0FBbEM7O2VBQ2VVLHlCIiwic291cmNlc0NvbnRlbnQiOlsiLy8gQ29weXJpZ2h0IChjKSAyMDE5IFViZXIgVGVjaG5vbG9naWVzLCBJbmMuXG4vL1xuLy8gUGVybWlzc2lvbiBpcyBoZXJlYnkgZ3JhbnRlZCwgZnJlZSBvZiBjaGFyZ2UsIHRvIGFueSBwZXJzb24gb2J0YWluaW5nIGEgY29weVxuLy8gb2YgdGhpcyBzb2Z0d2FyZSBhbmQgYXNzb2NpYXRlZCBkb2N1bWVudGF0aW9uIGZpbGVzICh0aGUgXCJTb2Z0d2FyZVwiKSwgdG8gZGVhbFxuLy8gaW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0c1xuLy8gdG8gdXNlLCBjb3B5LCBtb2RpZnksIG1lcmdlLCBwdWJsaXNoLCBkaXN0cmlidXRlLCBzdWJsaWNlbnNlLCBhbmQvb3Igc2VsbFxuLy8gY29waWVzIG9mIHRoZSBTb2Z0d2FyZSwgYW5kIHRvIHBlcm1pdCBwZXJzb25zIHRvIHdob20gdGhlIFNvZnR3YXJlIGlzXG4vLyBmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOlxuLy9cbi8vIFRoZSBhYm92ZSBjb3B5cmlnaHQgbm90aWNlIGFuZCB0aGlzIHBlcm1pc3Npb24gbm90aWNlIHNoYWxsIGJlIGluY2x1ZGVkIGluXG4vLyBhbGwgY29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS5cbi8vXG4vLyBUSEUgU09GVFdBUkUgSVMgUFJPVklERUQgXCJBUyBJU1wiLCBXSVRIT1VUIFdBUlJBTlRZIE9GIEFOWSBLSU5ELCBFWFBSRVNTIE9SXG4vLyBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSxcbi8vIEZJVE5FU1MgRk9SIEEgUEFSVElDVUxBUiBQVVJQT1NFIEFORCBOT05JTkZSSU5HRU1FTlQuIElOIE5PIEVWRU5UIFNIQUxMIFRIRVxuLy8gQVVUSE9SUyBPUiBDT1BZUklHSFQgSE9MREVSUyBCRSBMSUFCTEUgRk9SIEFOWSBDTEFJTSwgREFNQUdFUyBPUiBPVEhFUlxuLy8gTElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSxcbi8vIE9VVCBPRiBPUiBJTiBDT05ORUNUSU9OIFdJVEggVEhFIFNPRlRXQVJFIE9SIFRIRSBVU0UgT1IgT1RIRVIgREVBTElOR1MgSU5cbi8vIFRIRSBTT0ZUV0FSRS5cblxuaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCAqIGFzIHN0eWxlZCBmcm9tICdzdHlsZWQtY29tcG9uZW50cyc7XG5pbXBvcnQgRGF0YXNldExhYmVsIGZyb20gJ2NvbXBvbmVudHMvY29tbW9uL2RhdGFzZXQtbGFiZWwnO1xuXG5jb25zdCBTdHlsZWRNc2cgPSBzdHlsZWQuZGl2YFxuICBtYXJnaW4tdG9wOiAyNHB4O1xuYDtcblxuZXhwb3J0IGNvbnN0IERlbGV0ZURhdGFzZXRNb2RhbCA9ICh7ZGF0YXNldCA9IHt9LCBsYXllcnMgPSBbXX0pID0+IHtcbiAgLy8gcmV0cmlldmUgb25seSBsYXllcnMgcmVsYXRlZCB0byB0aGUgY3VycmVudCBkYXRhc2V0XG4gIGNvbnN0IGN1cnJEYXRhc2V0TGF5ZXJzID0gbGF5ZXJzLmZpbHRlcihcbiAgICBsYXllciA9PiBsYXllci5jb25maWcuZGF0YUlkID09PSBkYXRhc2V0LmlkXG4gICk7XG5cbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cImRlbGV0ZS1kYXRhc2V0LW1vZGFsXCI+XG4gICAgICA8RGF0YXNldExhYmVsIGRhdGFzZXQ9e2RhdGFzZXR9IC8+XG4gICAgICA8U3R5bGVkTXNnIGNsYXNzTmFtZT1cImRlbGV0ZS1kYXRhc2V0LW1zZ1wiPntgeW91IGFyZSBnb2luZyB0byBkZWxldGUgdGhpcyBkYXRhc2V0LiBJdCB3aWxsIGFmZmVjdCAke1xuICAgICAgICBjdXJyRGF0YXNldExheWVycy5sZW5ndGhcbiAgICAgIH0gbGF5ZXJzYH08L1N0eWxlZE1zZz5cbiAgICA8L2Rpdj5cbiAgKTtcbn07XG5cbmNvbnN0IERlbGV0ZURhdGFzZXRNb2RhbEZhY3RvcnkgPSAoKSA9PiBEZWxldGVEYXRhc2V0TW9kYWw7XG5leHBvcnQgZGVmYXVsdCBEZWxldGVEYXRhc2V0TW9kYWxGYWN0b3J5O1xuIl19
