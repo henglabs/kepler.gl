@@ -22,7 +22,6 @@ import {GeoJsonLayer} from 'deck.gl';
 import AggregationLayer from '../aggregation-layer';
 import EnhancedGridLayer from 'deckgl-layers/grid-layer/enhanced-grid-layer';
 import {pointToPolygonGeo} from './grid-utils';
-import GridLayerIcon from './grid-layer-icon';
 import {HIGHLIGH_COLOR_3D} from 'constants/default-settings';
 
 export const gridVisConfigs = {
@@ -52,7 +51,7 @@ export default class GridLayer extends AggregationLayer {
   }
 
   get layerIcon() {
-    return GridLayerIcon;
+    return null;
   }
 
   formatLayerData(_, allData, filteredIndex, oldLayerData, opt = {}) {

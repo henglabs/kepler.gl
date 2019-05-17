@@ -23,7 +23,6 @@ import {CHANNEL_SCALES, SCALE_FUNC, ALL_FIELD_TYPES} from 'constants/default-set
 import {hexToRgb} from 'utils/color-utils';
 import {geojsonFromPoints} from '../mapbox-utils';
 import MapboxGLLayer from '../mapboxgl-layer';
-import HeatmapLayerIcon from './heatmap-layer-icon';
 
 const MAX_ZOOM_LEVEL = 18;
 
@@ -96,7 +95,7 @@ class HeatmapLayer extends MapboxGLLayer {
   }
 
   get layerIcon() {
-    return HeatmapLayerIcon;
+    return null;
   }
 
   getVisualChannelDescription(channel) {

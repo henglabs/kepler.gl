@@ -25,7 +25,6 @@ import {TextLayer} from 'deck.gl';
 import Layer from '../base-layer';
 import ScatterplotBrushingLayer from 'deckgl-layers/scatterplot-brushing-layer/scatterplot-brushing-layer';
 import {hexToRgb} from 'utils/color-utils';
-import PointLayerIcon from './point-layer-icon';
 import {DEFAULT_LAYER_COLOR, CHANNEL_SCALES} from 'constants/default-settings';
 import {getDistanceScales} from 'viewport-mercator-project';
 
@@ -85,7 +84,7 @@ export default class PointLayer extends Layer {
   }
 
   get layerIcon() {
-    return PointLayerIcon;
+    return null;
   }
   get requiredLayerColumns() {
     return pointRequiredColumns;
