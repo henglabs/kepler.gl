@@ -140,7 +140,10 @@ export default class ClusterLayer extends CompositeLayer {
 
     const clusters = clustersAtZoom({bbox, clusterRadius, geoJSON, zoom});
 
-    this.setState({clusters});
+    if (clusters !== null && clusters.length) {
+      this.setState({clusters});
+    }
+
   }
 
   getColorValueDomain() {
