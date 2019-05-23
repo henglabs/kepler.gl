@@ -70,7 +70,7 @@ const defaultProps = {
 export default class ClusterLayer extends CompositeLayer {
   initializeState() {
     this.state = {
-      clusters: null,
+      clusters: [],
       geoJSON: null
     };
   }
@@ -140,7 +140,7 @@ export default class ClusterLayer extends CompositeLayer {
 
     const clusters = clustersAtZoom({bbox, clusterRadius, geoJSON, zoom});
 
-    if (clusters !== null && clusters.length) {
+    if (clusters.length) {
       this.setState({clusters});
     }
 
